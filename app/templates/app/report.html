@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Satelite Report </title>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>الاسم</th>
+                    <th>العلبة</th>
+                    <th>الدفعة</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for account in accounts %}
+                    <tr>
+                        <td>{{ account.name }}</td>
+                        <td>{{ account.box }}</td>
+                        <td>{{ account.month }} / {{ account.year }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
